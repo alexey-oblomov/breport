@@ -5,7 +5,14 @@
 
 Main site on Netlify: https://br.evetools.org/
 
-Mirror on Heroku: https://breport.herokuapp.com/
+It requires and works with API, currently deployed on Digital Ocean (source code not opened).
+
+API written in Node.js, MongoDB used as a storage.
+
+Killmails presented currently only for 2020 year.
+
+New killmails constantly pushed using zKillboard Killstream (https://github.com/zKillboard/zKillboard/wiki/Websocket)
+
 
 
 ### Run in DEV
@@ -20,3 +27,11 @@ $ npm start
 $ npm run build
 ```
 ---------------------------------
+
+## Contact
+
+Feel free to open issues, propose any ideas here on github or using any of below channels
+
+TweetFleet - @maullerz
+
+Discord - https://discord.gg/HyPnAU7
