@@ -21,28 +21,28 @@ $team-width-desktop: 420px;
     min-width: $team-width-tablet;
     max-width: $team-width-tablet;
   }
-  @media (min-width: 1024px) {
+/*  @media (min-width: 1024px) {
     min-width: $team-width-desktop;
     max-width: $team-width-desktop;
-  }
+  }*/
 }
 
 @mixin fontsize {
   font-size: 12px;
   line-height: 16px;
 
-  @media (min-width: 1024px) {
+/*  @media (min-width: 1024px) {
     font-size: 14px;
     line-height: 20px;
-  }
+  }*/
 }
 
 @mixin teamrow-fontsize {
   font-size: 12px;
   line-height: 16px;
 
-  @media (min-width: 1024px) {
+/*  @media (min-width: 1024px) {
     font-size: 14px;
     line-height: 16px;
-  }
+  }*/
 }

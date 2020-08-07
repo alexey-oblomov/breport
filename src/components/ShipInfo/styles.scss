@@ -21,7 +21,7 @@
     align-items: top;
     padding-left: 5px;
     text-decoration: none;
-    color: #e0e0e0;
+    color: #aaa;
     overflow: hidden;
 
     .char {
@@ -61,7 +61,7 @@
     }
 
     .pod {
-      color: #ddd;
+      color: #bbb;
       &:hover, &:active {
         text-decoration: underline;
       }

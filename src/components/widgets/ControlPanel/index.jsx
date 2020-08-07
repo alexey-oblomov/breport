@@ -47,12 +47,12 @@ class ControlPanel extends Component {
     return (
       <span className={styles.linkButton}>
         <Link to='/'>
-          <Button title='return to Dashboard' className={styles.backBtnWrapper}>
+          <Button title='Recent Battle Reports' className={styles.backBtnWrapper}>
             <div className={styles.iconCont}>
               <img src='/icons/favicon-32x32.png' alt='br-icon' />
             </div>
             <span className={styles.backBtn}>
-              Home
+              Recent Battle Reports
             </span>
           </Button>
         </Link>

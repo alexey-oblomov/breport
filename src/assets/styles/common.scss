@@ -17,6 +17,10 @@ html, body {
 body {
   -webkit-overflow-scrolling: touch;
 
+  .bp3-dark {
+    color: #aaa;
+  }
+
   .bp3-dialog-container {
     align-items: flex-start;
   }
@@ -39,6 +43,9 @@ body {
     }
   }
 
+  .bp3-dark .bp3-button:not([class*="bp3-intent-"]) {
+    color: #ccc;
+  }
 }
 
 #react-root {

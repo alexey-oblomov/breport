@@ -29,7 +29,7 @@
     padding: 10px 0;
     padding-bottom: 0;
 
-    @media (max-width: 420px) {
+    @media (max-width: 682px) {
       padding: 10px 5px;
       padding-bottom: 0;
     }
@@ -52,6 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #aaa;
 
     .buttons, .backBtnWrapper {
       display: flex;
@@ -66,9 +67,8 @@
     .backBtn {
       margin-left: 5px;
 
-      @media (max-width: 420px) {
+      @media (max-width: 767px) {
         display: none;
-        margin-left: -5px;
       }
     }
 

@@ -45,7 +45,6 @@ function groupShipsNew(data, countFightersAsSquad) {
             const group = SHIP_GROUPS.find(grp => grp[0] === ship.id)
             if (group && FIGHTERS_GROUPS.includes(group[2])) {
               coeff = getFighterCoef(group[2], ship.id)
-              console.log('ship.id:', ship.id, group[2], coeff)
             }
           }
           shipsTypes[ship.id].losed += 1

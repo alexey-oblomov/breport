@@ -17,6 +17,7 @@ class TabsPanel extends Component {
     return (
       <div className={styles.root}>
         <Tabs
+          animate={false}
           id='general'
           selectedTabId={currTab}
           onChange={this.handleTabChange}
