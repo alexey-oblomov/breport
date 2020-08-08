@@ -8,7 +8,8 @@ export default class MaintenancePage extends Component {
       <div className={styles.root}>
         <div className={styles.wrapper}>
           <h1>Battle Report tool</h1>
-          <h4>This tool is for generating battle reports from killmails held on zKillboard.com.</h4>
+          <h4>This tool specializes in the aggregation and presentation of battle reports from Eve Online.</h4>
+          <h4>Many thanks to zKillboard and @squizz for his API.</h4>
 
           <div className={styles.maintenanceRoot}>
             <div>Maintenance in progress...</div>

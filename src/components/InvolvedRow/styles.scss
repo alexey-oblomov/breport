@@ -24,8 +24,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-left: 2px;
     margin: 1px 0;
+
+    > div:last-child {
+      margin-left: 1px;
+    }
 
     .dmgGroup {
       display: flex;
@@ -39,8 +42,7 @@
     }
 
     .top {
-      /*color: #00FF00;*/
-      color: rgba(0, 255, 0, 0.77);
+      color: #00FF00;
     }
   }
 
@@ -87,6 +89,10 @@
     .moreShipsBtn {
       margin-left: 10px;
     }
+  }
+
+  .btnExpand {
+    margin-bottom: 1px;
   }
 
   .btnCollapse {

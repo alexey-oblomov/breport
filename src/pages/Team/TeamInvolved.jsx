@@ -57,7 +57,7 @@ class TeamInvolved extends Component {
         <div className={styles.body}>
           <div className={cx(styles.row, styles.gold)}>
             <span>Pilot</span>
-            <span>used ships | loss value</span>
+            <span>Loss value</span>
           </div>
           <div className={styles.row}>
             <span>Ship</span>

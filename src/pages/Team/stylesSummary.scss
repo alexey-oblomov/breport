@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 3px;
+    padding-left: 2px;
     padding-right: 5px;
     margin: 1px 0;
     background: #222;
@@ -35,7 +35,6 @@
       align-items: flex-start;
       flex-direction: column;
       max-width: 154px;
-      @media (min-width: 1024px) { max-width: 208px; }
 
       .shipName {
         width: 100%;

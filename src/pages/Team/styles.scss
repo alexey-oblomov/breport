@@ -50,23 +50,12 @@
     background-color: #333;
     color: #aaa;
     font-size: 12px;
-    margin: 2px;
-    padding-left: 32px;
-    /*@media (min-width: 1024px) { padding-left: 48px; }*/
+    padding-left: 34px;
 
     .extraShipsBtn {
       position: absolute;
       left: 4px;
       top: 9px;
-      /*
-      @media (min-width: 1024px) {
-        left: 8px;
-
-        :global(.bp3-button.bp3-small) {
-          min-width: 32px;
-          min-height: 32px;
-        }
-      }*/
     }
 
     .body {
@@ -93,19 +82,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 34px;
-      /*@media (min-width: 1024px) { min-width: 50px; }*/
+      min-width: 35px;
       min-height: 36px;
       height: 100%;
       text-align: center;
       border-left: 1px solid #000;
-    }
-
-    .ally {
-      min-width: 33px;
-      /*@media (min-width: 1024px) { min-width: 49px; }*/
-      border-left: 1px solid #000;
-      border-right: none;
     }
   }
 
@@ -120,8 +101,6 @@
     margin: 3px 0;
 
     .member {
-      /*height: 34px;*/
-      /*@media (max-width: 767px) { height: 28px; }*/
       height: 28px;
 
       padding: 0 3px;
@@ -135,6 +114,7 @@
         display: flex;
         align-items: center;
         margin: 0 5px;
+        color: #ddd;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -181,6 +161,7 @@
     border-collapse: separate;
     border-spacing: 1px;
     border: 1px solid #444;
+    padding: 1px;
 
     h4 {
       color: #aaa;
@@ -230,10 +211,13 @@
     display: flex;
     min-height: 34px;
     margin: 1px 0;
-    margin-left: 2px;
   }
   .timelineRowLoss {
     background-color: #480000;
+
+    > div:last-child {
+      margin-left: 1px;
+    }
 
     &:hover {
       background-color: #580000;

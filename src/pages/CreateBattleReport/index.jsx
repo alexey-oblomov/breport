@@ -18,7 +18,7 @@ function CreateBattleReport() {
         <h4>
           <Icon iconSize={16} icon='issue' intent='warning' />
           &nbsp;
-          Killmails presented currently only for 2020 year.
+          Killmails guaranteed only for 2020 year.
         </h4>
 
         <Link to='/'>Back</Link>
