@@ -1,20 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import styles from './styles.scss'
 
-const Ads = () => {
+const Ads = ({ type }) => {
   useEffect(() => {
     (window.adsbygoogle = window.adsbygoogle || []).push({})
   }, [])
 
+  if (type === 'dashboard') {
+    return (
+      <div className={styles.ads}>
+        <ins
+          className='adsbygoogle'
+          style={{ display: 'block' }}
+          data-ad-client='ca-pub-3299420347078208'
+          data-ad-slot='9657768171'
+          data-ad-format='auto'
+          data-full-width-responsive='true'
+        />
+      </div>
+    )
+  }
+
   return (
-    <div className={styles.ads}>
+    <div className={styles.adsHorizontal}>
       <ins
         className='adsbygoogle'
-        style={{ display: 'block' }}
+        style={{ display: 'inline-block', width: 728, height: 90 }}
         data-ad-client='ca-pub-3299420347078208'
         data-ad-slot='9657768171'
-        data-ad-format='auto'
-        data-full-width-responsive='true'
       />
     </div>
   )

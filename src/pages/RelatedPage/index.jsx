@@ -6,7 +6,7 @@ import startsWith from 'lodash/startsWith'
 
 import routerHistory from 'utils/routerHistory'
 import { getRelatedData, getRelatedDataStub, parseData, setBrInfo } from 'reducers/related'
-import { Spinner } from 'components'
+import { Spinner, Ads } from 'components'
 import { ControlPanel, BrInfo, Footer } from 'widgets'
 import { formatZkillTimestamp } from 'utils/FormatUtils'
 import RelatedService from 'api/RelatedService'
@@ -123,6 +123,7 @@ class RelatedPage extends Component {
         />
         {!isError && !isLoading &&
           <Fragment>
+            <Ads type='horizontal' />
             <BrInfo routerParams={params} />
             <div className={styles.space} />
             <Report

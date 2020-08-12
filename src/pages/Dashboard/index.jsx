@@ -31,7 +31,7 @@ class Dashboard extends Component {
             <Button large text='CREATE BATTLE REPORT' />
           </Link>
 
-          <Ads />
+          <Ads type='dashboard' />
 
           <div className={styles.recentLinks}>
             <NavLink to='/recent-brs'>

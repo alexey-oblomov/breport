@@ -26,4 +26,20 @@
       min-height: 50px;
     }
   }
+
+  .adsHorizontal {
+    width: 100%;
+    max-width: 730px;
+    height: 90px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+
+    ins {
+      min-width: 320px;
+      min-height: 50px;
+    }
+  }
 }

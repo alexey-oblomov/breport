@@ -6,7 +6,7 @@ import isEqual from 'lodash/isEqual'
 import RelatedService from 'api/RelatedService'
 import { getBR, getStubBR, setStatus, resetBr } from 'reducers/battlereport'
 import { brParseTeams } from 'reducers/related'
-import { Spinner } from 'components'
+import { Spinner, Ads } from 'components'
 import { ControlPanel, BrInfo, BrGroupInfo, Footer } from 'widgets'
 import Report from 'pages/Report'
 import styles from './styles.scss'
@@ -112,6 +112,7 @@ const BattleReportPage = ({ match: { params } }) => {
 
       {teams && teamsLosses &&
         <Fragment>
+          <Ads type='horizontal' />
           {br.new
             ? <BrGroupInfo relateds={br.relateds} />
             : <BrInfo routerParams={params} />
