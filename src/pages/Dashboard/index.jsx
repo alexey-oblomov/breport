@@ -4,6 +4,7 @@ import { Switch, Route, Redirect, Link, NavLink } from 'react-router-dom'
 import cx from 'classnames'
 
 
+import Ads from 'components/common/Ads'
 import { Button, Icon } from 'components/common/blueprint'
 import { Footer } from 'widgets'
 
@@ -29,6 +30,8 @@ class Dashboard extends Component {
           <Link to='/create' className={styles.createLink}>
             <Button large text='CREATE BATTLE REPORT' />
           </Link>
+
+          <Ads />
 
           <div className={styles.recentLinks}>
             <NavLink to='/recent-brs'>

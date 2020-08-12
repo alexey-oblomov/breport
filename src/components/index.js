@@ -4,6 +4,7 @@ import Spinner from './common/Spinner'
 import SmallSpinner from './common/SmallSpinner'
 import AllyIcon from './common/icons/AllyIcon'
 import ItemIcon from './common/icons/ItemIcon'
+import Ads from './common/Ads'
 
 export {
   ShipInfo,
@@ -12,4 +13,5 @@ export {
   SmallSpinner,
   AllyIcon,
   ItemIcon,
+  Ads,
 }

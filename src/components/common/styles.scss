@@ -12,4 +12,18 @@
       height: auto;
     }
   }
+
+  .ads {
+    width: 100%;
+    height: 135px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ins {
+      min-width: 320px;
+      min-height: 50px;
+    }
+  }
 }
