@@ -46,21 +46,17 @@
   }
 
   .timing {
-    /*font-size: 12px;*/
-    white-space: nowrap;
-    /*line-height: 18px;*/
+    span {
+      white-space: nowrap;
+    }
   }
 
   .battleDuration {
-    /*font-size: 12px;*/
-    /*line-height: 18px;*/
     display: flex;
     flex-wrap: wrap;
   }
 
   .generalStats {
-    /*font-size: 12px;*/
-    /*line-height: 22px;*/
     display: flex;
     flex-direction: column;
   }

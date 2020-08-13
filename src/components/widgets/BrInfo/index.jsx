@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { formatDistanceToNow } from 'date-fns'
 
 import { SYSTEMS_DATA } from 'data/constants'
-import { getUTCTime, formatSum, getDurationStr } from 'utils/FormatUtils'
+import { getUTCTime, formatSum, getDurationStr, shortTimeAgo } from 'utils/FormatUtils'
 import styles from './styles.scss'
 
 class BrInfo extends Component {
@@ -19,12 +18,17 @@ class BrInfo extends Component {
     if (!fromTime || !toTime) return null
     const dateStart = new Date(fromTime)
     const dateEnd = new Date(toTime)
+    const duration = getDurationStr(dateStart, dateEnd)
 
     return (
-      <div className={styles.timing}>
-        <div>{`${dateStart.toLocaleDateString()}, ${getUTCTime(dateStart)} - ${getUTCTime(dateEnd)} ET`}</div>
-        <div>{`${formatDistanceToNow(dateStart)} ago`}</div>
-      </div>
+      <React.Fragment>
+        <div className={styles.timing}>
+          <span>{`${dateStart.toLocaleDateString()}, ${getUTCTime(dateStart)} - ${getUTCTime(dateEnd)} ET`}</span>
+          {', '}
+          <span>ended {shortTimeAgo(dateEnd)}</span>
+        </div>
+        <div>{`Duration: ${duration}`}</div>
+      </React.Fragment>
     )
   }
 
@@ -36,14 +40,9 @@ class BrInfo extends Component {
     stats += ` Pilots: ${generalStats.pilotsCount},`
     stats += ` Views: ${viewed}`
 
-    const dateStart = new Date(fromTime)
-    const dateEnd = new Date(toTime)
-    const duration = getDurationStr(dateStart, dateEnd)
-
     return (
       <div className={styles.generalStats}>
         <div>{stats}</div>
-        <div>{`Duration: ${duration}`}</div>
       </div>
     )
   }

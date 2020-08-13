@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { formatDistanceToNow } from 'date-fns'
 import cx from 'classnames'
 import isEmpty from 'lodash/isEmpty'
 
 import RelatedService from 'api/RelatedService'
 import { Button } from 'components/common/blueprint'
 import * as StatsUtils from 'utils/StatsUtils'
-import { getUTCTime, formatSum, getDurationStr } from 'utils/FormatUtils'
+import { getUTCTime, formatSum, getDurationStr, shortTimeAgo } from 'utils/FormatUtils'
 import SystemName from '../SystemName'
 import styles from './styles.scss'
 
@@ -49,10 +48,9 @@ function BrRelatedInfo({ systemID, systems, start, end, onRemove, onEdit, brPage
 
     return (
       <div className={styles.timing}>
-        <div>{`${dateStart.toLocaleDateString()}, ${getUTCTime(dateStart)} - ${getUTCTime(dateEnd)} ET`}</div>
-        {!brPage &&
-          <div>{`${formatDistanceToNow(dateStart)} ago`}</div>
-        }
+        <span>{`${dateStart.toLocaleDateString()}, ${getUTCTime(dateStart)} - ${getUTCTime(dateEnd)} ET`}</span>
+        {', '}
+        <span>ended {shortTimeAgo(dateEnd)}</span>
       </div>
     )
   }
