@@ -137,9 +137,13 @@ const getDurationStr = (start, end) => {
   if (start < MAX_TS) interval.start *= 1000
   if (end < MAX_TS) interval.end *= 1000
 
-  const { hours, minutes, seconds } = intervalToDuration(interval)
+  const { days, hours, minutes, seconds } = intervalToDuration(interval)
   const duration = []
-  if (hours > 0) duration.push(`${hours}h`)
+  let totalHours = hours
+  if (days > 0) {
+    totalHours += days * 24
+  }
+  if (totalHours > 0) duration.push(`${totalHours}h`)
   if (minutes > 0) duration.push(`${minutes}m`)
   if (seconds > 0) duration.push(`${seconds}s`)
   if (duration.length === 0) return '0'
