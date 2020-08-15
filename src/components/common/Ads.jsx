@@ -1,10 +1,19 @@
 import React, { useEffect } from 'react'
+import cx from 'classnames'
 import styles from './styles.scss'
 
 const Ads = ({ type }) => {
   useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({})
+    if (process.env.NODE_ENV !== 'development') {
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
+    }
   }, [])
+
+  if (process.env.NODE_ENV === 'development') {
+    return type === 'dashboard'
+      ? <div className={cx(styles.ads, styles.background)} />
+      : <div className={cx(styles.adsHorizontal, styles.background)} />
+  }
 
   if (type === 'dashboard') {
     return (

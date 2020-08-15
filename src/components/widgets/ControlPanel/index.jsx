@@ -54,6 +54,9 @@ class ControlPanel extends Component {
             <span className={styles.backBtn}>
               Recent Battle Reports
             </span>
+            <span className={styles.backBtnSmall}>
+              Recent
+            </span>
           </Button>
         </Link>
       </span>
@@ -82,6 +85,7 @@ class ControlPanel extends Component {
               <Fragment>
                 &nbsp;
                 <Button
+                  className={(isLoading || error === 'processing') ? styles.hidden : undefined}
                   loading={isLoading || error === 'processing'}
                   onClick={onReload}
                   text='Reload'
